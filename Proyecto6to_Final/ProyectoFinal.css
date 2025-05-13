@@ -1,0 +1,261 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    top: 0;
+    width: 97.3%;
+    z-index: 1000;
+  } 
+  
+  
+  .icono-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover; 
+    
+  } 
+  
+  
+  
+  .nav-buttons button {
+    margin-right: 10px; 
+    padding: 10px 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  } 
+  
+  .nav-buttons button:hover {
+    background-color: #777; 
+  }
+  
+  
+  
+  .menu{
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 10px 20px;
+    background-color: #333;
+    color: white; 
+    position: relative;
+  }
+  
+  .menu-lista {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-lista li {
+    margin: 0 10px;
+  }
+  
+  .menu-lista a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-lista a:hover {
+    background-color: #555;
+  }
+  
+  .menu-lista li {
+    margin: 0 10px;
+  }
+  
+  .menu-lista li {
+    text-decoration: none;
+    color: white; 
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #333; 
+    transition: background-color 0.3s;
+  }
+  
+  .menu-lista li:hover {
+    background-color: #555; 
+  }  
+
+  
+  .seccion-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0; 
+    
+  }
+  
+  .columna {
+    flex: 1;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .imagen-izquierda img,
+  .imagen-derecha img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  }
+  
+  .texto-centro {
+    background-color: #B4C9DE;
+    text-align: center;
+    padding: 40px;
+    font-family: serif;
+    color: #222;
+  }
+  
+  .texto-centro h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .texto-centro p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .texto-centro button {
+    background-color: #0d0d0d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .texto-centro button:hover {
+    background-color: #333;
+  }
+  
+  .tours-section {
+    background-color: #142333; /* Fondo azul oscuro */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .tours-section h2 {
+    color: #8AAAE5;
+    letter-spacing: 1px;
+  }
+  
+  .tours-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .tour-card {
+    background-color: #142333;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .tour-card img {
+    width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 5px;
+  }
+  
+  .tour-info {
+    margin-top: 15px;
+    border-top: 1px solid #8AAAE5;
+    padding-top: 15px;
+  }
+  
+  .tour-info h3 {
+    color: #8AAAE5;
+    font-size: 1.1em;
+  }
+  
+  .tour-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  .tour-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid #8AAAE5;
+    background: transparent;
+    color: #8AAAE5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  
+  .tour-button:hover {
+    background-color: #8AAAE5;
+    color: #142333;
+  } 
+
+  .footer {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-columna {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+  
+  .footer-columna h3 {
+    color:#8AAAE5;
+    margin-bottom: 15px;
+  }
+  
+  .footer-columna a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-columna a:hover {
+    text-decoration: underline;
+    color: #8AAAE5;
+  }
+  
+  .footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+  } 
+
+  .cuerpo{background-color: #0B1C2C; overflow-x: hidden;}
