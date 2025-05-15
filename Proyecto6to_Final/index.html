@@ -131,33 +131,7 @@
   </div>
 </div> 
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const formulario = document.getElementById('form-reserva');
 
-    formulario.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Previene el refresco de página
-
-      const data = {
-        nombre_completo: document.querySelector('input[placeholder="Nombre completo"]').value,
-        correo_electronico: document.querySelector('input[placeholder="Correo electrónico"]').value,
-        direccion: document.querySelector('input[placeholder="Dirección"]').value,
-        numero_tarjeta: document.querySelector('input[placeholder="Número de tarjeta"]').value,
-        fecha_expiracion: document.querySelector('input[placeholder="MM/AA"]').value,
-        cvv: document.querySelector('input[placeholder="CVV"]').value
-      };
-
-      const res = await fetch('http://localhost:3000/api/reservas', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      const result = await res.json();
-      alert(result.message);
-    });
-  });
-</script>
   </section> 
  
 
