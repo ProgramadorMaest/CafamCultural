@@ -151,7 +151,7 @@
   }
   
   .tours-section {
-    background-color: #142333; /* Fondo azul oscuro */
+    background-color: #142333; 
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -258,4 +258,69 @@
     font-size: 14px;
   } 
 
-  .cuerpo{background-color: #0B1C2C; overflow-x: hidden;}
+  .cuerpo{background-color: #0B1C2C; overflow-x: hidden;} 
+
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.circulo-mitad {
+  width: 300px;
+  height: 300px;
+  background-color: #28a745;
+  border-radius: 50%;
+  position: absolute;
+  left: -150px; /* Mueve la mitad del círculo fuera */
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden; /* Elimina la parte que sale del formulario */
+}
+
+.contenido-formulario {
+  margin-left: 150px; /* Deja espacio suficiente para el círculo */
+  flex: 1;
+}
+
+.contenido-formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenido-formulario input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contenido-formulario button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contenido-formulario button:hover {
+  background-color: #218838;
+}

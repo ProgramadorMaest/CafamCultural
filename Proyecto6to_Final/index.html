@@ -24,13 +24,13 @@
     <nav class="menu">   
         
         <ul class="menu-lista">
-            <li><a href="Principal.html"> Inicio</a></li>
+            <li><a href="#inicio"> Inicio</a></li>
              
-            <li><a href="Nosotros.html"> Acerca de </a></li>
-            <li><a href="proyectos.html"> Reservar online</a></li>
-            <li><a href="Contacto.html"> Los guías</a></li> 
-            <li><a href="Contacto.html"> Historias</a></li> 
-            <li><a href="Contacto.html"> Contacto</a></li>
+            <li><a href="#acerca"> Acerca de </a></li>
+            <li><a href="#playa"> Reservar online</a></li>
+            
+            
+            <li><a href="#footer"> Contacto</a></li>
             </nav></li>
         </ul> 
         
@@ -39,15 +39,15 @@
 </header>
 
 
-  <section align="center" class="animate__animated animate__lightSpeedInLeft
+  <section id="inicio" align="center" class="animate__animated animate__lightSpeedInLeft
   " class="Imagen"> 
-      <img src="Catedral.jpg" alt="Imagen grande superior" width="1495px" height="900px" >
+      <img src="Catedral.jpg" alt="Imagen grande superior" width="1458px" height="900px" >
   </section> 
 
   
 
   
-  <section class="seccion-info">
+  <section class="seccion-info" id="acerca">
     <div class="columna imagen-izquierda">
       <img src="Basilica.jpg" alt="Catedral" data-aos="fade-right"/>
     </div>
@@ -65,7 +65,7 @@
       
   </section>
 
-  <section class="tours-section" data-aos="flip-left">
+  <section id="tour" class="tours-section" data-aos="flip-left">
     <h2>NUESTROS TOURS</h2>
     <div class="tours-grid">
       
@@ -76,7 +76,7 @@
           <p>Mié, Sáb, Dom</p>
           <p>1 H</p>
           <p>$100</p>
-          <button class="tour-button">RESERVAR AHORA</button>
+          
         </div>
       </div>
   
@@ -87,7 +87,7 @@
           <p>Sábado, Domingo</p>
           <p>1 H 30 MIN</p>
           <p>$100</p>
-          <button class="tour-button">RESERVAR AHORA</button>
+          
         </div>
       </div>
   
@@ -98,20 +98,70 @@
           <p>Martes, Viernes</p>
           <p>1 H 30 MIN</p>
           <p>$100</p>
-          <button class="tour-button">RESERVAR AHORA</button>
+        
         </div>
       </div>
   
     </div>
-  </section>
-  
+  </section>  
 
-  <section align="center">
-    <img src="Playa3.jpg" alt="Imagen grande abajo" width="1495px" height="400px" data-aos="fade-left">
+ 
+
+
+  <section id="playa"    align="center">
+    <div class="formulario" data-aos="fade-left"> 
+      <form id="form-reserva">
+  
+  <div class="circulo-mitad"></div>
+
+  <div class="contenido-formulario">
+    <h2>Reservar AKG</h2>
+
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="email" id="correo" placeholder="Correo electrónico" required>
+    <input type="text" id="direccion" placeholder="Dirección" required>
+
+    <h3>Datos de Pago</h3>
+    <input type="text" id="tarjeta" placeholder="Número de tarjeta" maxlength="16" required>
+    <input type="text" id="vencimiento" placeholder="MM/AA" maxlength="5" required>
+    <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+
+    <button type="submit">Reservar ahora</button> 
+    </form>
+  </div>
+</div> 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const formulario = document.getElementById('form-reserva');
+
+    formulario.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Previene el refresco de página
+
+      const data = {
+        nombre_completo: document.querySelector('input[placeholder="Nombre completo"]').value,
+        correo_electronico: document.querySelector('input[placeholder="Correo electrónico"]').value,
+        direccion: document.querySelector('input[placeholder="Dirección"]').value,
+        numero_tarjeta: document.querySelector('input[placeholder="Número de tarjeta"]').value,
+        fecha_expiracion: document.querySelector('input[placeholder="MM/AA"]').value,
+        cvv: document.querySelector('input[placeholder="CVV"]').value
+      };
+
+      const res = await fetch('http://localhost:3000/api/reservas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      alert(result.message);
+    });
+  });
+</script>
   </section> 
  
 
-  <footer class="footer" data-aos="flip-down">
+  <footer id="footer" class="footer" data-aos="flip-down">
     <div class="footer-contenido">
       <div class="footer-columna">
         <h3>Sobre Nosotros</h3>
@@ -135,7 +185,7 @@
       © 2025 Tours República Dominicana. Todos los derechos reservados.
     </div>
   </footer>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
