@@ -1,5 +1,5 @@
 const express = require("express"); 
-const reservasRoutes = require('./routes/reservas');
+//const reservasRoutes = require('./routes/reservas');
 const path = require("path");  
 
 const app = express(); 
